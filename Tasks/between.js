@@ -4,8 +4,7 @@ const getValueBetween = (string, prefix, suffix) => {
   i = string.indexOf(prefix);
   if (i === -1) return '';
   else {
-    k = i + prefix.length;
-    string = string.substring(k);
+    string = string.substring(i + prefix.length);
     if (suffix) {
       i = string.indexOf(suffix);
       if (i === -1) {
