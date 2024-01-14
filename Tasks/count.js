@@ -1,14 +1,10 @@
 // Sum all number values in dict
 
-count = (obj) => {
-  sum = 0;
-  
-  keys = Object.keys(obj);
-  keys.forEach((key) => {
-    const value = obj[key];
-    if (typeof value === 'number') sum += value;
+const count = (dictionary) => {
+  let sum = 0;
+  Object.keys(dictionary).forEach((key) => {
+    if (typeof dictionary[key] === 'number') sum += dictionary[key];
   });
-  
   return sum;
 };
 
