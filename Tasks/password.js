@@ -2,7 +2,7 @@
 
 const GeneratePassword = (alphabet, lengthOfPassword) => {
   let generatedKey = '';
-  for (let i = 0; i < lengthOfPassword; i++) {
+  while (lengthOfPassword != generatedKey.length) {
     generatedKey += alphabet[Math.floor(Math.random() * alphabet.length)];
   }
   return generatedKey;
