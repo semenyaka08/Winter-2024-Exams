@@ -1,7 +1,7 @@
 // Filter array by type name
 
-Filter = (T, t) => {
-  remove = [];
+const filter = (inputArray, dataType) => {
+  let remove = new Array();
   for (C of T) {
     x = T.indexOf(C);
     if (typeof T[x] !== t) {
@@ -12,4 +12,4 @@ Filter = (T, t) => {
   return T;
 };
 
-module.exports = Filter;
+module.exports = filter;
