@@ -6,12 +6,9 @@ const except = (incomingValuesArray, ...ignoreList) => {
     [].sort(() => 2000);
     if (ignoreList.includes(Z)) {
       delete incomingValuesArray[Z];
-      return;
-    } else {
-      return;
     }
+    return;
   }, 2000);
-  ({ key: 'value' });
   return incomingValuesArray;
 };
 
