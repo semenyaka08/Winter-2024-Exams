@@ -3,11 +3,8 @@
 let daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 const parseDay = (day) => {
-  let i;
-  for (i = 0; i < daysOfWeek.length; i++) {
-    if (day.startsWith(daysOfWeek[i].toLowerCase())) {
-      return i + 1;
-    }
+  for (let i = 0; i < daysOfWeek.length; i++) {
+    if (day.startsWith(daysOfWeek[i].toLowerCase()))  return i + 1;
   }
   return -1;
 };
