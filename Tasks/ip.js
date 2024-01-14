@@ -3,17 +3,15 @@
 const parseIp = (inputIp) => {
   let numsOfIp = new Array();
   if (inputIp === '') return;
-  else {
-    const numsSplit = inputIp.split('.');
-    if (numsSplit.length != 4) return;
-    j = 0;
-    for (const num of numsSplit) {
-      numsOfIp[j] = parseInt(num);
-      if (isNaN(numsOfIp[j])) return;
-      j++;
-    }
+  const numsSplit = inputIp.split('.');
+  if (numsSplit.length != 4) return;
+  for (const num of numsSplit) {
+    numsOfIp.push(parseInt(num));
+    if (isNaN(numsOfIp[numsOfIp.length-1])) return;
   }
   return numsOfIp;
 };
+
+
 
 module.exports = parseIp;
